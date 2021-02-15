@@ -9,7 +9,7 @@ The concepts of **pattern** and **matching** (via pattern-to-pattern comparison)
 
 Common regex (POSIX/PCRE/Emacs) primarily use to search (match) data inside files.
 
-	x		# Match Stream Letter or letters
+	x 		# Match Stream Letter or letters
 	. 		# Match any single character
 	? 		# Match any letter or number single character
 	^ 		# Match a pattern that starts with following text in field
