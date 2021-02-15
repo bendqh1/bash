@@ -9,15 +9,15 @@ The concepts of **pattern** and **matching** (via pattern-to-pattern comparison)
 
 Common regex (POSIX/PCRE/Emacs) primarily use to search (match) data inside files.
 
-	x				      # Match Stream Letter or letters
-	. 				    # Match any single character
-	? 				    # Match any letter or number single character
-	^ 				    # Match a pattern that starts with following text in field
-	$ 				    # Match a pattern that ends with following text in field
-	* 				    # Repeat previous matching pattern till the end of line
-	| 				    # Match this and/or this
-	\K 				    # Negate all before it in that field, to match per instructions, all that is after it
-	^xyz .* 	    # Match all that starts with xyz and a space, and all after it in that field
-	^[#;].* 		  # Match all lines starting with a `;` or `#`
-	^\s*$[\n\r]* 	# Match all empty lines (with their line feeds)
+	x				# Match Stream Letter or letters
+	. 				# Match any single character
+	? 				# Match any letter or number single character
+	^ 				# Match a pattern that starts with following text in field
+	$ 				# Match a pattern that ends with following text in field
+	* 				# Repeat previous matching pattern till the end of line
+	| 				# Match this and/or this
+	\K 				# Negate all before it in that field, to match per instructions, all that is after it
+	^xyz .* 	    		# Match all that starts with xyz and a space, and all after it in that field
+	^[#;].* 			# Match all lines starting with a `;` or `#`
+	^\s*$[\n\r]* 			# Match all empty lines (with their line feeds)
 
