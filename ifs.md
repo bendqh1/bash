@@ -19,6 +19,9 @@ For Bash, zsh and ksh:
 Restoring IFS's value in `sh` could be more complex though.
 
 ## Setting IFS to an empty value
+
+Because unsetting IFS causes some special fallback behavior, we can set it to an empty value to force not using it (or minimally using it):
+
 IFS can be set to an empty value ("null" IFS) via:
 
 * `IFS=`
