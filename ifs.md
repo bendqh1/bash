@@ -6,13 +6,9 @@ In Bourne shell and derivates the terms “Field splitting” and “word splitt
 
 In Bourne shell and derivates, IFS **is set** by default as an environment variable.
 
-## Interim note
-
-If IFS is not set, the shell should behave as if the value of `IFS` is `<space><tab><newline>`.
-
 ## Unsetting IFS
 
-`unset IFS` is equivalent to IFS being set to `$' \t\n'` (a space, a tab and a newline). 
+If IFS is not set (as with `unset IFS`), the shell shall behave **as if** the value of `IFS` was `<space>`, `<tab>` and `<newline>` which is equivalent to being set to `$' \t\n'`.
 
 ## Resetting IFS after unsetting it:
 
