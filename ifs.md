@@ -1,4 +1,4 @@
-IFS is a field (internal-content) separation program and the Bourne shell and derivates standard "field separator".
+IFS is a field (internal-content) separation program and the standard "field separator" in shells implementing POSIX behavior in general and Bourne shell and derivates in particular.
 
 In Bourne shell and derivates the terms “Field splitting” and “word splitting” are used interchangeably.
 
@@ -8,7 +8,7 @@ In Bourne shell and derivates, IFS **is set** by default as an environment varia
 
 ## Unsetting IFS
 
-If IFS is not set (as with `unset IFS`), the shell shall behave **as if** the value of `IFS` was `<space>`, `<tab>` and `<newline>` which is equivalent to being set to `$' \t\n'`.
+If IFS is not set (as with `unset IFS`), it shall behave as normal for an unset variable but if the shell is ought to do field splitting (for unquoted values, for splitting read input and when delimiting the positional parameters in the `"$*"` string), but the shell shall behave **as if** the value of `IFS` was `<space>`, `<tab>` and `<newline>` which is equivalent to being set to `$' \t\n'`.
 
 ## Resetting IFS after unsetting it:
 
