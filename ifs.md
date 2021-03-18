@@ -1,3 +1,5 @@
+Field splitting (field separation) is a component of word expansion, which is a small portion of command-line parsing in shells.
+
 IFS is a field (internal-content) separation program and the standard "field separator" in shells implementing POSIX behavior in general and Bourne shell and derivates in particular.
 
 In Bourne shell and derivates the terms “Field splitting” and “word splitting” are used interchangeably.
@@ -20,7 +22,7 @@ Restoring IFS's value in `sh` could be more complex though.
 
 ## Setting IFS to an empty value
 
-Because unsetting IFS causes some special fallback behavior, we can set it to an empty value to force not using it (or minimally using it):
+Because unsetting IFS causes special fallback behavior, we can set it to an empty value to force no essential usage of it:
 
 IFS can be set to an empty value ("null" IFS) via:
 
@@ -28,7 +30,7 @@ IFS can be set to an empty value ("null" IFS) via:
 * `IFS=''`
 * `IFS=""`  
 
-In that case, no field splitting will be performed at all and with `echo "$*"` all fields will be concatenated together with no spaces.
+In that case, no field splitting will be performed; thus, in a command such as `echo "$*"` all fields will be concatenated together with no field splitting.
 
 ## Miscellaneous
 
