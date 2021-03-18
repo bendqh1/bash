@@ -32,6 +32,8 @@ In that case, no field splitting will be performed at all and with `echo "$*"` a
 
 ## Miscellaneous
 
+* `IFS=!` is merely setting a non-existent value for IFS, so that you can iterate input line by line
+
 Consider `IFS=$'\n'`
 
 Normally Bash doesn't interpret escape sequences in string literals. So:
