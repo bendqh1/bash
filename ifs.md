@@ -46,4 +46,6 @@ Unlike `'\n'` --- `$'\n'` is a linebreak.
 
 ## IFS and `read`
 
-In POSIX shells, `read`, without any option doesn't read a line, rather, it reads *words* from a possibly backslash-continued line --- where words are `$IFS` delimited and backslashes can be used to continue lines or to escape delimiters.
+In POSIX shells, `read`, without any option doesn't read a line, rather, it reads *words* from a possibly backslash-continued line --- where words are `$IFS` delimited and backslashes can be used to continue lines or to escape IFS delimiters.
+
+The `-r` option removes the backslash processing, then backslashes cannot be used to continue lines or to escape IFS delimiters.
