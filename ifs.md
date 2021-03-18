@@ -43,3 +43,7 @@ Normally Bash doesn't interpret escape sequences in string literals. So:
 * `"\n"` isn't a linebreak - backslash followed by the letter `n`
 
 Unlike `'\n'` --- `$'\n'` is a linebreak.
+
+## IFS and `read`
+
+In POSIX shells, `read`, without any option doesn't read a line, rather, it reads *words* from a possibly backslash-continued line --- where words are `$IFS` delimited and backslashes can be used to continue lines or to escape delimiters.
