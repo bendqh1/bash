@@ -2,7 +2,7 @@ Field splitting (field separation) is a component of word expansion, which is a 
 
 IFS is a field (internal-content) separation program and the standard "field separator" in shells implementing POSIX behavior in general and Bourne shell and derivates in particular.
 
-changing `IFS` tends to have really confusing effects. There are a few places where it's relatively safe and has well-defined effects (like setting it for the `read` command, as in `IFS= read -r line`), but trying to understand its behavior in general is, in my opinion, more work than it's worth.
+Changing `IFS` tends to have really confusing effects. There are a few places where it's relatively safe and has well-defined effects (like setting it for the `read` command, as in `IFS= read -r line`), but trying to understand its behavior in general is, in my opinion, more work than it's worth.
 
 ## Bourne shell and derivates
 
