@@ -34,7 +34,7 @@ IFS can be set to an empty value ("null" IFS) via:
 * `IFS=''`
 * `IFS=""`  
 
-In that case, no field splitting will be performed; thus, in a command such as `echo "$*"` all fields will be concatenated together with no field splitting.
+In that case, no field splitting will be performed so two or more fields will be concatenated together with no field splitting.
 
 ## `IFS=!`
 
@@ -57,3 +57,7 @@ Unlike `'\n'` --- `$'\n'` is a linebreak.
 In POSIX shells, `read`, without any option doesn't read a line, rather, it reads *words* from a possibly backslash-continued line --- where words are `$IFS` delimited and backslashes can be used to continue lines or to escape IFS delimiters.
 
 The `-r` option removes the backslash processing, then backslashes cannot be used to continue lines or to escape IFS delimiters.
+
+## Notes
+
+* https://unix.stackexchange.com/questions/640010/testing-default-ifs-against-null-ifs
