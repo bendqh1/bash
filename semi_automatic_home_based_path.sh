@@ -1,3 +1,2 @@
-home_dir=$(echo $HOME) &&
-read website_path_after_home_dir && 
-full_path=$home_dir+=$website_path_after_home_dir # Note the +=
+read website_dir_relative_path_after_home_dir
+website_dir="${HOME}"/"${website_dir_relative_path_after_home_dir}"
