@@ -58,6 +58,6 @@ In POSIX shells, `read`, without any option doesn't read a line, rather, it read
 
 The `-r` option removes the backslash processing, then backslashes cannot be used to continue lines or to escape IFS delimiters.
 
-## Notes
+## Further reading
 
 * https://unix.stackexchange.com/questions/640010/testing-default-ifs-against-null-ifs
