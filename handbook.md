@@ -24,3 +24,6 @@
 
     # "meta" can be "F"
 
+## Links
+
+* https://unix.stackexchange.com/questions/653796/how-to-safely-remove-all-files-including-hidden-files-from-current-directory
