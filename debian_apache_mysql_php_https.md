@@ -66,7 +66,7 @@ This file contains basic application installation and/or configuration commands.
     #!/bin/bash
     
     apt update -y
-    apt upgrades ufw sshguard unattended-upgrades wget curl git zip unzip tree -y
+    apt upgrade ufw sshguard unattended-upgrades wget curl git zip unzip tree -y
     ufw --force enable
     ufw allow 22,25,80,443
     
