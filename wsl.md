@@ -33,3 +33,12 @@ Just re-run CMD as administrator.
 ```shell
 explorer.exe .
 ```
+
+## Debian/Ubuntu commands
+
+sudo apt update
+sudo apt install curl unzip
+sudo apt install php php-curl
+curl -sS https://getcomposer.org/installer -o composer-setup.php
+sudo php composer-setup.php --install-dir=/usr/local/bin --filename=composer
+composer -V
