@@ -123,17 +123,3 @@ The file:
     
     ln -sf /etc/apache2/sites-available/"$domain_2".conf /etc/apache2/sites-enabled/
     certbot --apache -d "$domain_2" -d www."$domain_2"
-
-## Possible appendix - install Drupal
-
-Because installing a composer-driven drupal project with a local Drush was the original aim of this program, I append the following:
-
-    composer create-project drupal-composer/drupal-project "$war"/"$domain"
-    cp "$drt/$domain"/wp-config-sample.php "$war/$domain"/wp-config.php
-    drush --root="$war" --uri="$domain" pm install redirect token metatag draggableviews
-    drush --root="$war" --uri="$domain" en language content_translation redirect token metatag draggableviews
-
-## Notes
-
-* The program doesn't cover backups because I personally believe that every hosting provider and that includes dedicating hosting, whether semi (commercial) or full (private), should include a reliable, most preferably communally maintained automatic daily backup mechanism, alongside a manual backup standardized routine procedure (say doing manual backup each quarter or half a year).
-* The program doesn't cover web application upgrades because I personally believe that every CMS should include an upgrade mechanism of its own by default, without bestowing upon users the need do maximal upgrade automation from backend.
