@@ -27,3 +27,4 @@
 ## Links
 
 * https://unix.stackexchange.com/questions/653796/how-to-safely-remove-all-files-including-hidden-files-from-current-directory
+* https://unix.stackexchange.com/questions/710901/what-is-the-meaning-of-chmod-r-a-x-a-rx-uw
