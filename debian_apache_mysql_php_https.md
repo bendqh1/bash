@@ -29,13 +29,13 @@ File 1 code is as follows (clarifications available below the code block).
     		cd $war/
     	}
     	
-    	ssr() {
+	ssr() {
 		chown -R www-data:www-data "$war"/
 		find "$war"/* -type d -exec chmod 755 {} \+
 		find "$war"/* -type f -exec chmod 644 {} \+
 		systemctl restart apache*
 		chmod -R 000 "$war"/"$dmp"/
-    	}
+	}
     	tmd() {
     		chmod -R a-x,a=rX,u+w "$war"/"$dmp"/
     		echo "chmod -R 000 "$war"/"$dmp"/" | at now + 1 hours
