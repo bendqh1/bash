@@ -33,7 +33,6 @@ File 1 code is as follows (clarifications available below the code block).
 		chown -R www-data:www-data "$war"/
 		find "$war"/* -type d -exec chmod 755 {} \+
 		find "$war"/* -type f -exec chmod 644 {} \+
-		chmod -R a-x,a=rX,u+w "$war"/
 		systemctl restart apache*
 		chmod -R 000 "$war"/"$dmp"/
     	}
