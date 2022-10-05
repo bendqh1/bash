@@ -3,9 +3,9 @@ apt update -y
 apt upgrade ufw sshguard unattended-upgrades wget curl git zip unzip tree -y
 ufw --force enable
 ufw allow 22,25,80,443
+
 apt install lamp-server^ -y
 a2enmod http2 deflate expires
-apt-get install phpmyadmin php-mbstring php-gettext -y
 
 cat <<-EOF >> "$HOME"/.profile
 	set -x
