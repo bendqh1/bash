@@ -3,12 +3,7 @@ cat <<-EOF >> "$HOME"/.profile
 	set -x
 	complete -r
 	export web_application_root="/var/www/html"
-	export -f web_application_root
 	export -f full_apache_restart
-
-	web_application_root() {
-	  cd $web_application_root/
-	}
 
 	full_apache_restart() {
 	  find "$web_application_root"/* -type d -exec chmod 755 {} \+
