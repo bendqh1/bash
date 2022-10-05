@@ -5,6 +5,7 @@ ufw --force enable
 ufw allow 22,25,80,443
 apt install lamp-server^ -y
 a2enmod http2 deflate expires
+apt-get install phpmyadmin php-mbstring php-gettext -y
 
 cat <<-EOF >> "$HOME"/.profile
 	set -x
@@ -20,3 +21,4 @@ cat <<-EOF >> "$HOME"/.profile
 	}
 EOF
 source "$HOME"/.profile 2>/dev/null
+
