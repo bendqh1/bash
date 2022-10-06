@@ -1,6 +1,7 @@
 #!/bin/bash
 
 apt update -y
+apt install phpmyadmin php-mbstring php-gettext -y
 apt upgrade ufw sshguard unattended-upgrades wget curl git zip unzip tree -y
 ufw --force enable
 ufw allow 22,25,80,443
@@ -23,3 +24,6 @@ cat <<-EOF >> "$HOME"/.profile
 EOF
 source "$HOME"/.profile 2>/dev/null
 
+# Set DB credentials with PHPMyAdmin
+# Set Apache virtual host
+# Set SSL certificate
