@@ -26,4 +26,3 @@ source "$HOME"/.profile 2>/dev/null
 
 # Set DB credentials with PHPMyAdmin
 # Set Apache virtual host
-# Set SSL certificate
