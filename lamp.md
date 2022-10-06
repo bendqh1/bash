@@ -1,4 +1,5 @@
 #!/bin/bash
+
 apt update -y
 apt upgrade ufw sshguard unattended-upgrades wget curl git zip unzip tree -y
 ufw --force enable
