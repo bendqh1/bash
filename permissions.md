@@ -1,3 +1,5 @@
+`chmod u=w,g-rwx,o-rwx` says "set u to 2, and decrease `rwx` from both `g` and `o`".
+
 user:aviro wrote [here](https://unix.stackexchange.com/questions/730196/does-chmod-uw-means-give-the-user-owner-writing-permissions-2-something-some):
 
 u+w adds the 2 to the original permission the owner had. 
