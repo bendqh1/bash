@@ -1,17 +1,17 @@
 Here is an example for a secured mysqldump backup to home directory.
 
-## Background directives
+## Prequisites
 
     read -s db_name
     read -s db_nonroot_user_name
     current_date="$(date +%d-%m-%Y-%H-%M-%S)"
     general_backups_dir="${HOME}/backups_test/"
 
-## Create the backup directory:
+## Create a backups directory:
 
     mkdir -p ${HOME}/backups_test/
 
-## Create the backup:
+## Create a backup:
 
     mysqldump -u"$db_nonroot_user_name" -p "$db_name" > "${general_backups_dir}/${db_nonroot_user_name}-${current_date}.sql"
 
