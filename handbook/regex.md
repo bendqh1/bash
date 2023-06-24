@@ -1,14 +1,5 @@
 The concepts of **pattern** and **matching** (via pattern-to-pattern comparison) are important for learning regex.
 
-## man
-
-To find a letter argument until a space in `man` do:
-
--X[, ]
-
-* X here is the letter of the argument.
-* [, ] here "the letter" with a comma or a whitespace if there is any right after --- until any other character.
-
 ## Visual Studio Code
 
 * Click `CTRL+Shift+P`, then choose Convert indentation to Tabs
@@ -58,6 +49,16 @@ Shell wildcards primarily use to search (match) file name data and philosophical
 	echo b{ed,s} 	# Don't use spaces unlness they are part of the file name; match bed or beds;
 	echo {a..z} 	# Literal range
 	echo {1..10} 	# Numerical range
+
+## man
+
+To find a letter argument until a space in `man` do:
+
+-X[, ]
+
+* X here is the letter of the argument.
+* [, ] here "the letter" with a comma or a whitespace if there is any right after --- until any other character.
+
 
 ## Asking questions about regex
 
