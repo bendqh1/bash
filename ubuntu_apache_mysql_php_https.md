@@ -18,7 +18,7 @@ set -x
 complete -r
 
 export web_application_root="/var/www/html"
-export preferred_database_management_program="phpminiadmin"
+export preferred_database_management_program="phpmyadmin"
 
 export -f web_application_root server_and_security_restart temporarily_manage_database # Create execution shortcuts to the following functions:
 
@@ -51,7 +51,7 @@ source "$HOME"/.profile 2>/dev/null
 ### File 1 variables
 
 * The `web_application_root` variable's value reflects a user's preferred *Web Application Root* directory
-* The `preferred_database_management_program` variable's value reflects a user's preferred *Database Management Program* (such as *phpMiniAdmin*)
+* The `preferred_database_management_program` variable's value reflects a user's preferred *Database Management Program* (such as *phpmyadmin*)
 
 ### File 1 functions
 
