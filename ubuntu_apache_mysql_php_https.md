@@ -8,7 +8,7 @@ It is aimed to be used on fresh Debian installations and to host a web applicati
 
 This file contains fundamental installation and/or configuration commands and is comprised of two parts:
 
-* The first part is a `cat` heredocument for `.profile` aimed to declare some global modes, variables and functions ("global" as to effect all shell sessions) that from my experience are harmless although global.
+* The first part is a `cat` heredocument for `.profile` aimed to declare some global modes, variables and functions ("global" as to effect all shell sessions), which, from my experience, are harmless.
 
 * The second part is a "sourcing" of `.profile` to ensure the variables will take effect in the very first shell session in which they are declared at and also after every booting of Debian.
 
