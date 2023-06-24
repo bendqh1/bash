@@ -20,9 +20,9 @@ complete -r
 export web_application_root="/var/www/html"
 export preferred_database_management_program="phpmyadmin"
 
-export -f web_application_root server_and_security_restart temporarily_manage_database # Create execution shortcuts to the following functions:
+export -f go_to_web_application_root server_and_security_restart temporarily_manage_database # Create execution shortcuts to the following functions:
 
-web_application_root() {
+go_to_web_application_root() {
 	cd $web_application_root/
 }
 
@@ -55,7 +55,7 @@ source "$HOME"/.profile 2>/dev/null
 
 ### File 1 functions
 
-* The function `web_application_root` means something like "navigate to Web Application Root easy and fast"<br>
+* The function `go_to_web_application_root` means something like "navigate to Web Application Root easy and fast"<br>
 * The function `server_and_security_restart` means **Secured Server Restart:**; that is, restart web server with repeating basic security directives that might have been mistakenly changed, as well as allowing temporary management of MySQL database by a database management program<br>
 * The function `temporarily_manage_database` means *Temporarily Manage Database* and is useful after DB-manager security lock by `server_and_security_restart()`
 
