@@ -10,7 +10,7 @@ This file contains fundamental installation and/or configuration commands and is
 
 * The first part is a `cat` heredocument for `.profile` aimed to declare some global modes, variables and functions ("global" as to effect all shell sessions), which, from my experience, are harmless.
 
-* The second part is a "sourcing" of `.profile` to ensure the variables will take effect in the very first shell session in which they are declared at and also after every booting of Debian.
+* The second part is a "sourcing" of `.profile` to ensure the changes will be effective in the very first shell session and also after every booting of Debian.
 
 File 1 code is as follows (clarifications available below the code block).
 
@@ -34,6 +34,7 @@ File 1 code is as follows (clarifications available below the code block).
 		find "$war"/* -type d -exec chmod 755 {} \+
 		find "$war"/* -type f -exec chmod 644 {} \+
 		systemctl restart apache*
+  
 		chmod -R 000 "$war"/"$dmp"/
 	}
     	tmd() {
