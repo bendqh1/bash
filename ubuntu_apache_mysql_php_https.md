@@ -16,26 +16,26 @@ File 1 code is as follows (clarifications available below the code block).
     	set -x
     	complete -r
     
-    	export war="/var/www/html"
+    	export web_application_root="/var/www/html"
     	export dmp="phpminiadmin"
     
-    	export -f war ssr tmd # Create execution shortcuts to the following functions:
+    	export -f web_application_root ssr tmd # Create execution shortcuts to the following functions:
     
-    	war() {
-    		cd $war/
+    	web_application_root() {
+    		cd $web_application_root/
     	}
     	
 	ssr() {
-		chown -R www-data:www-data "$war"/
-		find "$war"/* -type d -exec chmod 755 {} \+
-		find "$war"/* -type f -exec chmod 644 {} \+
+		chown -R www-data:www-data "$web_application_root"/
+		find "$web_application_root"/* -type d -exec chmod 755 {} \+
+		find "$web_application_root"/* -type f -exec chmod 644 {} \+
 		systemctl restart apache*
   
-		chmod -R 000 "$war"/"$dmp"/
+		chmod -R 000 "$web_application_root"/"$dmp"/
 	}
     	tmd() {
-    		chmod -R a-x,a=rX,u+w "$war"/"$dmp"/
-    		echo "chmod -R 000 "$war"/"$dmp"/" | at now + 1 hours
+    		chmod -R a-x,a=rX,u+w "$web_application_root"/"$dmp"/
+    		echo "chmod -R 000 "$web_application_root"/"$dmp"/" | at now + 1 hours
     	}
     EOF
     
@@ -48,12 +48,12 @@ File 1 code is as follows (clarifications available below the code block).
 
 ### File 1 variables
 
-* The `war` variable's value reflects a user's preferred *Web Application Root* directory
+* The `web_application_root` variable's value reflects a user's preferred *Web Application Root* directory
 * The `dmp` variable's value reflects a user's preferred *Database Management Program* (such as *phpMiniAdmin*)
 
 ### File 1 functions
 
-* The function `war` means something like "navigate to Web Application Root easy and fast"<br>
+* The function `web_application_root` means something like "navigate to Web Application Root easy and fast"<br>
 * The function `ssr` means **Secured Server Restart:**; that is, restart web server with repeating basic security directives that might have been mistakenly changed, as well as allowing temporary management of MySQL database by a database management program<br>
 * The function `tmd` means *Temporarily Manage Database* and is useful after DB-manager security lock by `ssr()`
 
@@ -116,7 +116,7 @@ The file:
     		ServerAdmin admin@"$domain_2"
     		ServerName ${domain_2}
     		ServerAlias www.${domain_2}
-    		DocumentRoot $war/${domain_2}
+    		DocumentRoot $web_application_root/${domain_2}
     		ErrorLog ${APACHE_LOG_DIR}/error.log
     		CustomLog ${APACHE_LOG_DIR}/access.log combined
     	</VirtualHost>
