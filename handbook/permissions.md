@@ -8,3 +8,5 @@ If he had only read permissions, after the chmod command, the owner will have 4+
 
 By the way, if the command was chmod u=w (equal sign instead of a plus sign), then you would be correct, and the owner's permission would change to 2 (only write). 
 That's the difference between + and = in the chmod command.
+
+* [Typically, which file users (owners) come with a distro?](https://unix.stackexchange.com/questions/730207/typically-which-file-users-owners-come-with-a-distro)
