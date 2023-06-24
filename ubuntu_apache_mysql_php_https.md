@@ -72,7 +72,7 @@ This file contains basic application installation and/or configuration commands.
     ufw --force enable
     ufw allow 22,25,80,443
     apt install lamp-server^
-    # apt install php-mbstring php-gettext php-cli php-mysql # Do it from Composer?
+    # apt install phpmyadmin php-mbstring php-gettext php-cli php-mysql # Do it with Composer?
     apt install python-certbot-apache
     certbot --apache -d DOMAIN.TLD -d www.DOMAIN.TLD 
     curl -sS https://getcomposer.org/installer -o composer-setup.php
