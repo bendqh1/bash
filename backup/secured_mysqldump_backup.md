@@ -1,4 +1,4 @@
-Here is an example fo a secured mysqldump backup to home directory operation:
+Here is an example for a secured mysqldump backup to home directory.
 
 ## Background directives
 
