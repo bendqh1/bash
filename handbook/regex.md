@@ -1,6 +1,15 @@
 The concepts of **pattern** and **matching** (via pattern-to-pattern comparison) are important for learning regex.
 
-### Visual Studio Code
+## man
+
+To find a letter argument until a space in `man` do:
+
+-X[, ]
+
+* X here is the letter of the argument.
+* [, ] here "the letter" with a comma or a whitespace if there is any right after --- until any other character.
+
+## Visual Studio Code
 
 * Click `CTRL+Shift+P`, then choose Convert indentation to Tabs
 * When deleting all lines, hitting Enter in the replace field might not be enough and we'll need to click the replace button instead
@@ -18,7 +27,7 @@ REPLACE:
 DELETE LAST COMMA FROM RELEVANT LAST LINE
 ```
 
-### Common regex
+## Common regex
 
 Common regex (POSIX/PCRE/Emacs) primarily use to search (match) data inside files.
 
@@ -35,14 +44,20 @@ Common regex (POSIX/PCRE/Emacs) primarily use to search (match) data inside file
 	^\s*$[\n\r]* 	# Match all empty lines (with their line feeds)
 	[^\s-]          # Match until this (until Whitespace; Caret in a [] is a negator
 
-## man
+## Shell wildcards
 
-To find a letter argument until a space in `man` do:
+Shell wildcards (or shell globs) are a type of shell (file name) expansion, such as tilde expansion.<br>
+Shell wildcards primarily use to search (match) file name data and philosophically can be grapsed as a type of regex dedicated to matching operations on file names.
 
--X[, ]
-
-* X here is the letter of the argument.
-* [, ] here "the letter" with a comma or a whitespace if there is any right after --- until any other character
+	? 		# Match any single character;
+	* 		# Match any string of characters;
+	[est] 		# Match any character in set;
+	[!set] 		# Match any character not in set;
+	[!a-zA-Z] 	# Match any character that isn't a regular English letter;
+	[!.;] 		# Match any character except a period and a semicolon;
+	echo b{ed,s} 	# Don't use spaces unlness they are part of the file name; match bed or beds;
+	echo {a..z} 	# Literal range
+	echo {1..10} 	# Numerical range
 
 ## Asking questions about regex
 
