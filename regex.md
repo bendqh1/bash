@@ -43,3 +43,23 @@ To find a letter argument until a space in `man` do:
 
 * X here is the letter of the argument.
 * [, ] here "the letter" with a comma or a whitespace if there is any right after --- until any other character
+
+## Asking questions about regex
+
+* Background information on a regex problem
+
+* Current state
+* Desired state
+
+### What I have tried to solve the problem:
+
+1. Search (match)
+1. Replace with
+1. **Result by code (`Four_whitespace_characters_code`)**<br>
+   **Result by quote (`>`)**
+
+### Notes
+
+### My question
+
+How would you solve this problem or at least hint to solve it?
