@@ -17,7 +17,7 @@ File 1 code is as follows (clarifications available below the code block).
     	complete -r
     
     	export web_application_root="/var/www/html"
-    	export dmp="phpminiadmin"
+    	export preferred_database_management_program="phpminiadmin"
     
     	export -f web_application_root ssr tmd # Create execution shortcuts to the following functions:
     
@@ -31,11 +31,11 @@ File 1 code is as follows (clarifications available below the code block).
 		find "$web_application_root"/* -type f -exec chmod 644 {} \+
 		systemctl restart apache*
   
-		chmod -R 000 "$web_application_root"/"$dmp"/
+		chmod -R 000 "$web_application_root"/"$preferred_database_management_program"/
 	}
     	tmd() {
-    		chmod -R a-x,a=rX,u+w "$web_application_root"/"$dmp"/
-    		echo "chmod -R 000 "$web_application_root"/"$dmp"/" | at now + 1 hours
+    		chmod -R a-x,a=rX,u+w "$web_application_root"/"$preferred_database_management_program"/
+    		echo "chmod -R 000 "$web_application_root"/"$preferred_database_management_program"/" | at now + 1 hours
     	}
     EOF
     
@@ -49,7 +49,7 @@ File 1 code is as follows (clarifications available below the code block).
 ### File 1 variables
 
 * The `web_application_root` variable's value reflects a user's preferred *Web Application Root* directory
-* The `dmp` variable's value reflects a user's preferred *Database Management Program* (such as *phpMiniAdmin*)
+* The `preferred_database_management_program` variable's value reflects a user's preferred *Database Management Program* (such as *phpMiniAdmin*)
 
 ### File 1 functions
 
