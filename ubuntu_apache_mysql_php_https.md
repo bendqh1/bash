@@ -57,7 +57,7 @@ source "$HOME"/.profile 2>/dev/null
 * The function `ssr` means **Secured Server Restart:**; that is, restart web server with repeating basic security directives that might have been mistakenly changed, as well as allowing temporary management of MySQL database by a database management program<br>
 * The function `tmd` means *Temporarily Manage Database* and is useful after DB-manager security lock by `ssr()`
 
-### File 2
+## File 2
 
 This file contains basic application installation and/or configuration commands.
 
@@ -76,7 +76,7 @@ This file contains basic application installation and/or configuration commands.
     
     a2enmod http2 deflate expires # Activate Apache mods
 
-### File 3
+## File 3
 
 This file uses to create an Apache virtual host and associated files.
 
