@@ -1,6 +1,6 @@
 The following program is comprised of three files and is aimed to be used as a Debian-Apache-MySQL-PHP-HTTPS version-agnostic environment bootstrapper.
 
-It is aimed to be used on raw Debian systems (anything that doesn't come with the OS wasn't installed) and to establish web domain associated web applications.
+It is aimed to be used on fresh Debian installations and to host a web application.
 
 ## The program
 
