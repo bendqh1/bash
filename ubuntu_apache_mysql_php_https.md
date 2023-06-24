@@ -10,6 +10,7 @@ This file is comprised of two parts, each part contains fundamental installation
 
 File 1 code is as follows (clarifications available below the code block).
 
+```shell
 #!/bin/bash
 
 cat <<-EOF >> "$HOME"/.profile
@@ -40,6 +41,7 @@ tmd() {
 EOF
 
 source "$HOME"/.profile 2>/dev/null
+```
 
 ### File 1 modes
 
@@ -61,20 +63,22 @@ source "$HOME"/.profile 2>/dev/null
 
 This file contains basic application installation and/or configuration commands.
 
-    #!/bin/bash
-    
-    apt update -y
-    apt upgrade ufw sshguard unattended-upgrades wget curl git zip unzip tree -y
-    ufw --force enable
-    ufw allow 22,25,80,443
-    apt install lamp-server^
-    # apt install phpmyadmin php-mbstring php-gettext php-cli php-mysql # Do it with Composer?
-    apt install python-certbot-apache
-    certbot --apache -d DOMAIN.TLD -d www.DOMAIN.TLD 
-    curl -sS https://getcomposer.org/installer -o composer-setup.php
-    php composer-setup.php --install-dir=/usr/local/bin --filename=composer
-    
-    a2enmod http2 deflate expires # Activate Apache mods
+```shell
+#!/bin/bash
+
+apt update -y
+apt upgrade ufw sshguard unattended-upgrades wget curl git zip unzip tree -y
+ufw --force enable
+ufw allow 22,25,80,443
+apt install lamp-server^
+# apt install phpmyadmin php-mbstring php-gettext php-cli php-mysql # Do it with Composer?
+apt install python-certbot-apache
+certbot --apache -d DOMAIN.TLD -d www.DOMAIN.TLD 
+curl -sS https://getcomposer.org/installer -o composer-setup.php
+php composer-setup.php --install-dir=/usr/local/bin --filename=composer
+
+a2enmod http2 deflate expires # Activate Apache mods
+```
 
 ## File 3
 
