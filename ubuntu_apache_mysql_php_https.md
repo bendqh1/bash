@@ -10,36 +10,36 @@ This file is comprised of two parts, each part contains fundamental installation
 
 File 1 code is as follows (clarifications available below the code block).
 
-    #!/bin/bash
-    
-    cat <<-EOF >> "$HOME"/.profile
-    	set -x
-    	complete -r
-    
-    	export web_application_root="/var/www/html"
-    	export preferred_database_management_program="phpminiadmin"
-    
-    	export -f web_application_root ssr tmd # Create execution shortcuts to the following functions:
-    
-    	web_application_root() {
-    		cd $web_application_root/
-    	}
-    	
-	ssr() {
-		chown -R www-data:www-data "$web_application_root"/
-		find "$web_application_root"/* -type d -exec chmod 755 {} \+
-		find "$web_application_root"/* -type f -exec chmod 644 {} \+
-		systemctl restart apache*
-  
-		chmod -R 000 "$web_application_root"/"$preferred_database_management_program"/
-	}
-    	tmd() {
-    		chmod -R a-x,a=rX,u+w "$web_application_root"/"$preferred_database_management_program"/
-    		echo "chmod -R 000 "$web_application_root"/"$preferred_database_management_program"/" | at now + 1 hours
-    	}
-    EOF
-    
-    source "$HOME"/.profile 2>/dev/null
+#!/bin/bash
+
+cat <<-EOF >> "$HOME"/.profile
+set -x
+complete -r
+
+export web_application_root="/var/www/html"
+export preferred_database_management_program="phpminiadmin"
+
+export -f web_application_root ssr tmd # Create execution shortcuts to the following functions:
+
+web_application_root() {
+	cd $web_application_root/
+}
+
+ssr() {
+	chown -R www-data:www-data "$web_application_root"/
+	find "$web_application_root"/* -type d -exec chmod 755 {} \+
+	find "$web_application_root"/* -type f -exec chmod 644 {} \+
+	systemctl restart apache*
+
+	chmod -R 000 "$web_application_root"/"$preferred_database_management_program"/
+}
+tmd() {
+	chmod -R a-x,a=rX,u+w "$web_application_root"/"$preferred_database_management_program"/
+	echo "chmod -R 000 "$web_application_root"/"$preferred_database_management_program"/" | at now + 1 hours
+}
+EOF
+
+source "$HOME"/.profile 2>/dev/null
 
 ### File 1 modes
 
