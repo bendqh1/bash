@@ -6,7 +6,7 @@ It is aimed to be used on fresh Debian installations and to host a web applicati
 
 ### File 1
 
-This file contains fundamental installation and/or configuration commands and comprised of two parts:
+This file contains fundamental installation and/or configuration commands and is comprised of two parts:
 
 * The first part is a `cat` heredocument for `.profile` aimed to declare some global modes, variables and functions ("global" as to effect all shell sessions) that from my experience are harmless although global.
 
