@@ -131,6 +131,6 @@ cat <<-EOF > /etc/apache2/sites-available/$domain.conf
     </VirtualHost>
 EOF
 
-ln -sf /etc/apache2/sites-available/"$domain_2".conf /etc/apache2/sites-enabled/
+ln -sf /etc/apache2/sites-available/"$domain".conf /etc/apache2/sites-enabled/
 certbot --apache -d "$domain" -d www."$domain"
 ```
