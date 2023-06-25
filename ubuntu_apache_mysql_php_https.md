@@ -94,11 +94,13 @@ The file:
 ```shell
 #!/bin/bash
 
-read -p "Have you created db credentials already?" yn
+### Ensure the user has created a database ### 
+
+read -p "Have you created a database for your web application already?" yn
 case $yn in
     [Yy]* ) break;;
     [Nn]* ) exit;;
-    * ) echo "Please create db credentials and then comeback;";;
+    * ) echo "Please comeback after you create a database for your website;";;
 esac
 
 ### Create read opearations with verification ###
