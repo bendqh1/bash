@@ -71,7 +71,7 @@ apt upgrade ufw sshguard unattended-upgrades wget curl git zip unzip tree -y
 ufw --force enable
 ufw allow 22,25,80,443
 apt install lamp-server^
-# apt install phpmyadmin php-mbstring php-gettext php-cli php-mysql # Do it with Composer?
+apt install php-gd php-zip php-cli pho-json php-curl php-mysql php-mbstring php-gettext phpmyadmin
 apt install python-certbot-apache
 certbot --apache -d DOMAIN.TLD -d www.DOMAIN.TLD 
 curl -sS https://getcomposer.org/installer -o composer-setup.php
