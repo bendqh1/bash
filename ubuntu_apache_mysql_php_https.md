@@ -82,9 +82,9 @@ a2enmod http2 deflate expires # Activate Apache mods
 
 ## File 3
 
-This file uses to create an Apache virtual host and associated files.
+This file is used for creating a Apache virtual host and associated files.
 
-This file should be executed only after creating a CMS-contexed database on top of MySQL program, based on a single pattern of data, **the web domain** which also uses as the name for:
+This file should be executed only after a CMS-contexed database was created.
 
 * Web application DB user
 * Web application DB instance
