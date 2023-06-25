@@ -73,7 +73,6 @@ ufw allow 22,25,80,443
 apt install lamp-server^
 apt install php-gd php-zip php-cli pho-json php-curl php-mysql php-mbstring php-gettext phpmyadmin
 apt install python-certbot-apache
-certbot --apache -d DOMAIN.TLD -d www.DOMAIN.TLD 
 curl -sS https://getcomposer.org/installer -o composer-setup.php
 php composer-setup.php --install-dir=/usr/local/bin --filename=composer
 
