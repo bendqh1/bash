@@ -20,7 +20,7 @@ complete -r
 export web_application_root="/var/www/html"
 export preferred_database_management_program="phpmyadmin"
 
-export -f go_to_web_application_root security_and_server_restart temporarily_manage_database_and_lock_it_again_on_exit # Create execution shortcuts to the following functions:
+export -f go_to_web_application_root security_and_server_restart temporarily_manage_database_and_lock_it_again # Create execution shortcuts to the following functions:
 
 go_to_web_application_root() {
 	cd $web_application_root/
@@ -30,11 +30,11 @@ security_and_server_restart() {
 	chown -R www-data:www-data "$web_application_root"/
 	find "$web_application_root"/* -type d -exec chmod 755 {} \+
 	find "$web_application_root"/* -type f -exec chmod 644 {} \+
-	chmod -R 000 "$web_application_root"/"$preferred_database_management_program"/ # Lock it for *temporarily_manage_database_and_lock_it_again_on_exit* function
+	chmod -R 000 "$web_application_root"/"$preferred_database_management_program"/ # Lock it for *temporarily_manage_database_and_lock_it_again* function
  	systemctl restart apache*
 }
 
-temporarily_manage_database_and_lock_it_again_on_exit() {
+temporarily_manage_database_and_lock_it_again() {
 	chmod -R a-x,a=rX,u+w "$web_application_root"/"$preferred_database_management_program"/
 	echo "chmod -R 000 "$web_application_root"/"$preferred_database_management_program"/" | at now + 1 hours
 }
@@ -57,7 +57,7 @@ source "$HOME"/.profile 2>/dev/null
 
 * The function `go_to_web_application_root` means something like "navigate to Web Application Root easy and fast".
 * The function `security_and_server_restart` repeats basic security directives that might have been mistakenly changed, then allows temporary management of MySQL database by a database management program as well as restarting the webserver.
-* The function `temporarily_manage_database_and_lock_it_again_on_exit` means Temporarily manage the database until it locks again by `security_and_server_restart()`.
+* The function `temporarily_manage_database_and_lock_it_again` means Temporarily manage the database until it locks again by `security_and_server_restart()`.
 
 ## File 2
 
