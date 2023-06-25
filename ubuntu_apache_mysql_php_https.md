@@ -2,11 +2,11 @@ The following program is comprised of three files and is aimed to be used on fre
 
 ## File 1
 
-This file is comprised of two parts, each part contains fundamental installation and/or configuration commands.
+This file is comprised of two parts.
 
 * The first part is a `cat` heredocument for `.profile` aimed to declare some global modes, variables and functions ("global" as to effect all shell sessions), which, from my experience, are harmless.
 
-* The second part is a "sourcing" of `.profile`, to ensure the changes will be effective in the very first shell session and also after every boot of Debian.
+* The second part is a single `source` sourcing of `.profile`, to ensure that the changes will be effective immediately in the very first shell session and actually in **any** shell session.
 
 File 1 code is as follows (clarifications available below the code block).
 
