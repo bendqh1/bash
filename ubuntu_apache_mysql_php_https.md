@@ -115,11 +115,13 @@ function read_and_verify  {
     fi
 }
 
-### verified-reads for crucial information about your website ###
+### read and verify for crucial information about your website ###
 
 read_and_verify domain "Please enter the domain of your web application twice" 
 read_and_verify dbrootp "Please enter the app DB root password twice" 
 read_and_verify dbuserp "Please enter the app DB user password twice"
+
+### Creaate a virtual host file ###
 
 cat <<-EOF > /etc/apache2/sites-available/$domain.conf
     <VirtualHost *:80>
@@ -131,6 +133,8 @@ cat <<-EOF > /etc/apache2/sites-available/$domain.conf
         CustomLog ${APACHE_LOG_DIR}/access.log combined
     </VirtualHost>
 EOF
+
+### Make a softlink from the virtual host to the file enabling it ### 
 
 ln -sf /etc/apache2/sites-available/"$domain".conf /etc/apache2/sites-enabled/
 certbot --apache -d "$domain" -d www."$domain"
