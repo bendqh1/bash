@@ -94,7 +94,7 @@ The file:
 ```shell
 #!/bin/bash
 
-### Ensure the user has created a database ### 
+### Ensure that the user has created a database already ### 
 
 read -p "Have you created a database for your web application already?" yn
 case $yn in
