@@ -115,7 +115,7 @@ function read_and_verify  {
     fi
 }
 
-### Read operations with verification ###
+### Make some read operations verified ###
 
 read_and_verify domain "Please enter the domain of your web application twice" 
 read_and_verify dbrootp "Please enter the app DB root password twice" 
