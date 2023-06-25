@@ -103,7 +103,7 @@ case $yn in
     * ) echo "Please comeback after you create a database for your website;";;
 esac
 
-### Create read opearations with verification ###
+### Make some read operations verified ###
 
 function read_and_verify  {
     read -p "$1:" tmp1
@@ -115,7 +115,7 @@ function read_and_verify  {
     fi
 }
 
-### Make some read operations verified ###
+### verified-reads for crucial information about your website ###
 
 read_and_verify domain "Please enter the domain of your web application twice" 
 read_and_verify dbrootp "Please enter the app DB root password twice" 
