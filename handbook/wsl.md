@@ -12,7 +12,7 @@ To delete a WSL version installed before the Windows store standard, go to eithe
 Open CMD or PowerShell and run:
 
 ```shell
-wsl --install
+wsl --install -d Ubuntu
 ```
 
 If you get the error:
