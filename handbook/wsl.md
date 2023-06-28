@@ -7,9 +7,9 @@ To delete a WSL version installed before the Windows store standard, go to eithe
 * msconfig (services)
 * Turn Windows features on or off
 
-## New version (Ubuntu)
+## Install a new version (Ubuntu)
 
-Open CMD and run:
+Open CMD or PowerShell and run:
 
 ```shell
 wsl --install
