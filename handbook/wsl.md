@@ -13,7 +13,6 @@ Open CMD or PowerShell and run:
 
 ```shell
 wsl --install
-wsl --set-version ubuntu 2
 ```
 
 If you get the error:
