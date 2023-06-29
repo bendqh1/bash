@@ -29,16 +29,15 @@ security_and_server_restart
 
 ```shell
 #!/bin/bash
-
 cat <<-EOF > /etc/apache2/sites-available/$domain_2.conf
-    <VirtualHost *:80>
-        ServerAdmin admin@"$domain_2"
-        ServerName ${domain_2}
-        ServerAlias www.${domain_2}
-        DocumentRoot $web_application_root/${domain_2}
-        ErrorLog ${APACHE_LOG_DIR}/error.log
-        CustomLog ${APACHE_LOG_DIR}/access.log combined
-    </VirtualHost>
+<VirtualHost *:80>
+ServerAdmin admin@"$domain_2"
+ServerName ${domain_2}
+ServerAlias www.${domain_2}
+DocumentRoot $web_application_root/${domain_2}
+ErrorLog ${APACHE_LOG_DIR}/error.log
+CustomLog ${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>
 EOF
 ```
 
