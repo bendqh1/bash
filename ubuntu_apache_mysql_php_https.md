@@ -78,22 +78,6 @@ a2enmod http2 deflate expires # Activate Apache mods
 
 ## File 3
 
-Ensure that the user has created:
-
-* Web application DB user
-* Web application DB instance
-
-```shell
-read -p "Have you created a database for your web application already?" yn
-case $yn in
-    [Yy]* ) break;;
-    [Nn]* ) exit;;
-    * ) echo "Please comeback after you create a database for your website;";;
-esac
-```
-
-## File 4
-
 This file is used for creating a Apache virtual host and associated files.
 
 ```shell
@@ -125,5 +109,10 @@ EOF
 ### Make a softlink from the virtual host to the file enabling it ### 
 
 ln -sf /etc/apache2/sites-available/"$domain_2".conf /etc/apache2/sites-enabled/
-certbot --apache -d "$domain_2" -d www."$domain_2"
 ```
+
+## File 4 ##
+
+certbot --apache -d "$domain_2" -d www."$domain_2"
+
+echo "Open PHPMyAdmin and create databases";
