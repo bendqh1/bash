@@ -107,19 +107,19 @@ This file is used for creating a Apache virtual host and associated files.
 read -p domain_1
 read -p domain_2
 if [ "$domain_1" = "$domain_2" ]; then
-echo $domain2.
+echo $domain_2.
 else
    echo Mismatch.
 fi
 
 ### Creaate a virtual host file ###
 
-cat <<-EOF > /etc/apache2/sites-available/$domain.conf
+cat <<-EOF > /etc/apache2/sites-available/$domain_2.conf
     <VirtualHost *:80>
-        ServerAdmin admin@"$domain"
-        ServerName ${domain}
-        ServerAlias www.${domain}
-        DocumentRoot $web_application_root/${domain}
+        ServerAdmin admin@"$domain_2"
+        ServerName ${domain_2}
+        ServerAlias www.${domain_2}
+        DocumentRoot $web_application_root/${domain_2}
         ErrorLog ${APACHE_LOG_DIR}/error.log
         CustomLog ${APACHE_LOG_DIR}/access.log combined
     </VirtualHost>
@@ -127,6 +127,6 @@ EOF
 
 ### Make a softlink from the virtual host to the file enabling it ### 
 
-ln -sf /etc/apache2/sites-available/"$domain".conf /etc/apache2/sites-enabled/
-certbot --apache -d "$domain" -d www."$domain"
+ln -sf /etc/apache2/sites-available/"$domain_2".conf /etc/apache2/sites-enabled/
+certbot --apache -d "$domain_2" -d www."$domain_2"
 ```
