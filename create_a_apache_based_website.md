@@ -49,3 +49,9 @@ ln -sf /etc/apache2/sites-available/"$domain_2".conf /etc/apache2/sites-enabled/
 ```shell
 certbot --apache -d "$domain_2" -d www."$domain_2"
 ```
+
+## Unset any variable used above
+
+```shell
+unset domain
+```
