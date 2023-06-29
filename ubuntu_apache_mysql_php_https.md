@@ -74,14 +74,6 @@ curl -sS https://getcomposer.org/installer -o composer-setup.php
 php composer-setup.php --install-dir=/usr/local/bin --filename=composer
 
 a2enmod http2 deflate expires # Activate Apache mods
-```
-
-## File 3 -- Create and enable a Apahce virtual host file
-
-```shell
-#!/bin/bash
-
-## Input for data that will be used in the virtual host file ##
 
 read -p domain_1
 read -p domain_2
@@ -90,8 +82,12 @@ echo $domain_2.
 else
    echo Mismatch.
 fi
+```
 
-### Creaate a virtual host file ###
+## File 4 -- Create and enable a Apahce virtual host file
+
+```shell
+#!/bin/bash
 
 cat <<-EOF > /etc/apache2/sites-available/$domain_2.conf
     <VirtualHost *:80>
@@ -109,7 +105,7 @@ EOF
 ln -sf /etc/apache2/sites-available/"$domain_2".conf /etc/apache2/sites-enabled/
 ```
 
-## File 4 -- Final configurations ##
+## File 3 -- Final configurations ##
 
 ```shell
 certbot --apache -d "$domain_2" -d www."$domain_2"
