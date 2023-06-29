@@ -44,7 +44,6 @@ source "$HOME"/.profile 2>/dev/null
 
 ### functions
 
-* The function `go_to_web_application_root` means something like "navigate to Web Application Root easy and fast".
 * The function `security_and_server_restart` repeats basic security directives that might have been mistakenly changed, then allows temporary management of MySQL database by a database management program as well as restarting the webserver.
 * The function `temporarily_manage_database_and_lock_it_again` means Temporarily manage the database until it locks again by `security_and_server_restart()`.
 
