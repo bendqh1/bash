@@ -34,6 +34,7 @@ cd $web_application_root
 apt install phpmyadmin
 mv /usr/share/phpmyadmin $web_application_root
 security_and_server_restart
+temporarily_manage_database_and_lock_it_again
 ```
 
 ## Upload a database
