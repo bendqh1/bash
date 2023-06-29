@@ -40,9 +40,11 @@ cat <<-EOF > /etc/apache2/sites-available/$domain_2.conf
         CustomLog ${APACHE_LOG_DIR}/access.log combined
     </VirtualHost>
 EOF
+```
 
 ## Make a softlink from the virtual host file ⟶ to the file enabling it ##
 
+```shell
 ln -sf /etc/apache2/sites-available/"$domain_2".conf /etc/apache2/sites-enabled/
 ```
 
