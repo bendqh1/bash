@@ -81,27 +81,26 @@ a2enmod http2 deflate expires # Activate Apache mods
 
 ## File 3
 
-This file is used for creating a Apache virtual host and associated files.
-
-This file should be executed only after a CMS-contexed database was created.
+Ensure that the user has created:
 
 * Web application DB user
 * Web application DB instance
-* Web application directory (explained in following chapter)
-
-The file:
 
 ```shell
-#!/bin/bash
-
-### Ensure that the user has created a database already ### 
-
 read -p "Have you created a database for your web application already?" yn
 case $yn in
     [Yy]* ) break;;
     [Nn]* ) exit;;
     * ) echo "Please comeback after you create a database for your website;";;
 esac
+```
+
+## File 4
+
+This file is used for creating a Apache virtual host and associated files.
+
+```shell
+#!/bin/bash
 
 ## Input for data that will be used in the virtual host file ##
 
