@@ -53,7 +53,7 @@ source "$HOME"/.profile 2>/dev/null
 #!/bin/bash
 
 apt update -y
-apt upgrade ufw sshguard unattended-upgrades wget curl git zip unzip tree -y
+apt upgrade ufw sshguard unattended-upgrades at wget curl git zip unzip tree -y
 ufw --force enable
 ufw allow 22,25,80,443/tcp
 ufw allow 22,25,80,443/udp
