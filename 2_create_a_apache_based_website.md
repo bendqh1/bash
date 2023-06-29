@@ -1,4 +1,4 @@
-## Point Domain DNSs to you IaaS hosting provider
+## Point Domain DNSs to your IaaS hosting provider
 Just do it !
 
 ## Define a domain to work with
