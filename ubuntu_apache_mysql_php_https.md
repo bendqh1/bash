@@ -55,7 +55,8 @@ source "$HOME"/.profile 2>/dev/null
 apt update -y
 apt upgrade ufw sshguard unattended-upgrades wget curl git zip unzip tree -y
 ufw --force enable
-ufw allow 22,25,80,443
+ufw allow 22,25,80,443/tcp
+ufw allow 22,25,80,443/udp
 apt install lamp-server^
 apt install php-gd php-zip php-cli pho-json php-curl php-mysql php-mbstring php-gettext phpmyadmin
 apt install python-certbot-apache
