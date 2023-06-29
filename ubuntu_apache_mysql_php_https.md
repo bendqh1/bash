@@ -1,4 +1,4 @@
-The following program is comprised of three files and is aimed to be used on fresh Debian installations -- as a Debian-Apache-MySQL-PHP-HTTPS version-agnostic environment-bootstrapper to host at least one web application.
+Create a Debian-Apache-MySQL-PHP-HTTPS version-agnostic environment-bootstrapper to host at least one web application.
 
 ## File 1 -- Background variables and functions for future comfortability
 
@@ -74,7 +74,9 @@ curl -sS https://getcomposer.org/installer -o composer-setup.php
 php composer-setup.php --install-dir=/usr/local/bin --filename=composer
 
 a2enmod http2 deflate expires # Activate Apache mods
+```
 
+```shell
 read -p domain_1
 read -p domain_2
 if [ "$domain_1" = "$domain_2" ]; then
