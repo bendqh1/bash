@@ -1,9 +1,9 @@
 ## Define a domain to work with
 
 ```shell
-read -p email_1 &&
-read -p email_2 &&
-if [ "$email_1" = "$email_2" ]; then
+read -p domain_1 &&
+read -p domain_2 &&
+if [ "$domain_1" = "$domain_2" ]; then
 echo $email_2.
 else
    echo Mismatch.
