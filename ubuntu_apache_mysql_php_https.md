@@ -17,7 +17,9 @@ complete -r
 export web_application_root="/var/www/html"
 export preferred_database_management_program="phpmyadmin"
 
-export -f go_to_web_application_root security_and_server_restart temporarily_manage_database_and_lock_it_again # Create execution shortcuts to the following functions:
+export -f go_to_web_application_root
+export -f security_and_server_restart
+export -f temporarily_manage_database_and_lock_it_again
 
 go_to_web_application_root() {
 	cd $web_application_root/
