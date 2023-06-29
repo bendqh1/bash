@@ -1,3 +1,6 @@
+## Point Domain DNSs to you IaaS hosting provider
+Just do it !
+
 ## Define a domain to work with
 
 ```shell
@@ -24,6 +27,14 @@ apt install phpmyadmin
 mv /usr/share/phpmyadmin $web_application_root
 security_and_server_restart
 ```
+
+## Upload a database
+
+Just do it !
+
+## Unzip a zip of files in the new file tree (created above)
+
+Just do it !
 
 ## Create a Apahce virtual host file
 
