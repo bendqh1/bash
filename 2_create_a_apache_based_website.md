@@ -43,7 +43,6 @@ EOF
 
 ## Make a softlink from the virtual host file ⟶ to the file enabling it ##
 
-```shell
 ln -sf /etc/apache2/sites-available/"$domain_2".conf /etc/apache2/sites-enabled/
 ```
 
