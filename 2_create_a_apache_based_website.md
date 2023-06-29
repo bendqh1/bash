@@ -33,9 +33,8 @@ unzip My_Zip_File
 apt install phpmyadmin
 mv /usr/share/phpmyadmin $web_application_root
 apt install libapache2-mod-php
-apt install phpseclib
+apt install php-seclib
 apt install php-pear
-a2disconf php8.0-fpm
 security_and_server_restart
 temporarily_manage_database_and_lock_it_again
 
