@@ -11,8 +11,8 @@ This file is comprised of two parts.
 #!/bin/bash
 
 cat <<-EOF >> "$HOME"/.profile
-set -x
-complete -r
+set -x # Work in debug mode
+complete -r # Prevent messy output from "programmable completion
 
 export web_application_root="/var/www/html"
 export preferred_database_management_program="phpmyadmin"
@@ -42,17 +42,7 @@ EOF
 source "$HOME"/.profile 2>/dev/null
 ```
 
-### File 1 modes
-
-* The mode `set -x` means constant working in full debug mode.
-* The mode `complete -r` means constant removal of messy output of programmable completion (by calling to functions, etc) common in full debug mode.
-
-### File 1 variables
-
-* The `web_application_root` variable's value reflects a user's preferred *Web Application Root* directory.
-* The `preferred_database_management_program` variable's value reflects a user's preferred *Database Management Program* (such as *phpmyadmin*).
-
-### File 1 functions
+### functions
 
 * The function `go_to_web_application_root` means something like "navigate to Web Application Root easy and fast".
 * The function `security_and_server_restart` repeats basic security directives that might have been mistakenly changed, then allows temporary management of MySQL database by a database management program as well as restarting the webserver.
