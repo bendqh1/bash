@@ -3,8 +3,8 @@
 ```shell
 read -p domain_1 &&
 read -p domain_2 &&
-if [ "${domain_1}" = "${domain_2}" ]; then
-echo $domain_2.
+if [ "$domain_1" == "$domain_2" ]; then
+echo $domain_2
 else
    echo Mismatch.
 fi
