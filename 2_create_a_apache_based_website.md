@@ -16,7 +16,14 @@ fi
 ## Create a website basic filetree
 
 ```shell
-mkdir ${web_application_root}/${domain_2};
+mkdir ${web_application_root}/${domain_2}
+```
+
+## Use WinSCP to upload a file tree zip to the relevant directory and unzip it there
+
+```shell
+cd ${web_application_root}/${domain_2}
+unzip My_Zip_File
 ```
 
 ## Install and configure PHPMyAdmin
@@ -29,10 +36,6 @@ security_and_server_restart
 ```
 
 ## Upload a database
-
-Just do it !
-
-## Unzip a zip of files in the new file tree (created above)
 
 Just do it !
 
