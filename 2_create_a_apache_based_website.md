@@ -21,6 +21,7 @@ mkdir ${web_application_root}/${domain_2};
 ```shell
 cd $web_application_root
 apt install phpmyadmin
+mv /usr/share/phpmyadmin $web_application_root
 echo 'Open PHPMyAdmin and do what's needed.'
 ```
 
