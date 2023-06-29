@@ -16,7 +16,7 @@ fi
 mkdir ${web_application_root}/${domain_2};
 ```
 
-## Configure PHPMyAdmin and work with it
+## Install and configure PHPMyAdmin and work with it
 
 ```shell
 cd $web_application_root
