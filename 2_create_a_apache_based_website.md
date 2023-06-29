@@ -22,6 +22,7 @@ mkdir ${web_application_root}/${domain_2}
 ## Use WinSCP to upload a file tree zip to the relevant directory and unzip it there
 
 ```shell
+# WinSCP usage
 cd ${web_application_root}/${domain_2}
 unzip My_Zip_File
 ```
