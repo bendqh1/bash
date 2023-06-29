@@ -1,5 +1,6 @@
 ## Define a domain to work with
 
+```shell
 read -p email_1
 read -p email_2
 if [ "$email_1" = "$email_2" ]; then
@@ -7,14 +8,19 @@ echo $email_1.
 else
    echo Mismatch.
 fi
+```
 
 ## Create a website basic filetree
 
+```shell
 mkdir web_application_root/${domain_2};
+```
 
 ## Create a website Database on `localhost` with PHPMyAdmin
 
-Open PHPMyAdmin and do what's needed.
+```shell
+echo 'Open PHPMyAdmin and do what's needed.'
+```
 
 ## Create a Apahce virtual host file
 
