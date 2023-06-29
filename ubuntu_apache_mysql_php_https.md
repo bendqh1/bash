@@ -1,6 +1,6 @@
 The following program is comprised of three files and is aimed to be used on fresh Debian installations -- as a Debian-Apache-MySQL-PHP-HTTPS version-agnostic environment-bootstrapper to host at least one web application.
 
-## File 1 -- Background variables anf functions for future comfortability
+## File 1 -- Background variables and functions for future comfortability
 
 This file is comprised of two parts.
 
