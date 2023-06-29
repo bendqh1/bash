@@ -59,7 +59,7 @@ ufw allow 22,25,80,443/tcp
 ufw allow 22,25,80,443/udp
 apt install lamp-server^
 apt install gettext
-apt install php-gd php-zip php-cli pho-json php-curl php-mysql php-mbstring phpmyadmin
+apt install php-gd php-zip php-cli php-json php-curl php-mysql php-mbstring phpmyadmin
 apt install python-certbot-apache
 curl -sS https://getcomposer.org/installer -o composer-setup.php
 php composer-setup.php --install-dir=/usr/local/bin --filename=composer
