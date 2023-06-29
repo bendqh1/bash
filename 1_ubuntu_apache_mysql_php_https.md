@@ -65,4 +65,5 @@ curl -sS https://getcomposer.org/installer -o composer-setup.php
 php composer-setup.php --install-dir=/usr/local/bin --filename=composer
 
 a2enmod http2 deflate expires # Activate Apache mods
+systemctl restart apache2
 ```
