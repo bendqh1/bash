@@ -13,7 +13,7 @@ fi
 ## Create a website basic filetree
 
 ```shell
-mkdir web_application_root/${domain_2};
+mkdir ${web_application_root}/${domain_2};
 ```
 
 ## Create a website Database on `localhost` with PHPMyAdmin
