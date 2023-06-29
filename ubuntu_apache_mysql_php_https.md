@@ -103,23 +103,15 @@ case $yn in
     * ) echo "Please comeback after you create a database for your website;";;
 esac
 
-### Make some read operations verified ###
+## Input for data that will be used in the virtual host file ##
 
-function read_and_verify  {
-    read -p "$1:" tmp1
-    read -p "$2:" tmp2
-    if [ "$tmp1" != "$tmp2" ]; then
-        echo "Values unmatched. Please try again."; return 2
-    else
-        read "$1" <<< "$tmp1"
-    fi
-}
-
-### read and verify for crucial information about your website ###
-
-read_and_verify domain "Please enter the domain of your web application twice" 
-read_and_verify dbrootp "Please enter the app DB root password twice" 
-read_and_verify dbuserp "Please enter the app DB user password twice"
+read -p domain_1
+read -p domain_2
+if [ "$domain_1" = "$domain_2" ]; then
+echo $domain2.
+else
+   echo Mismatch.
+fi
 
 ### Creaate a virtual host file ###
 
