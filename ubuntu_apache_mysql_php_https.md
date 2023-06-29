@@ -56,9 +56,7 @@ source "$HOME"/.profile 2>/dev/null
 * The function `security_and_server_restart` repeats basic security directives that might have been mistakenly changed, then allows temporary management of MySQL database by a database management program as well as restarting the webserver.
 * The function `temporarily_manage_database_and_lock_it_again` means Temporarily manage the database until it locks again by `security_and_server_restart()`.
 
-## File 2
-
-This file contains basic application installation and/or configuration commands.
+## File 2 -- Basic application installation and/or configuration
 
 ```shell
 #!/bin/bash
@@ -76,9 +74,7 @@ php composer-setup.php --install-dir=/usr/local/bin --filename=composer
 a2enmod http2 deflate expires # Activate Apache mods
 ```
 
-## File 3
-
-This file is used for creating a Apache virtual host and associated files.
+## File 3 -- Create and enable a Apahce virtual host file
 
 ```shell
 #!/bin/bash
@@ -111,7 +107,7 @@ EOF
 ln -sf /etc/apache2/sites-available/"$domain_2".conf /etc/apache2/sites-enabled/
 ```
 
-## File 4 ##
+## File 4 ## -- Final configurations
 
 ```shell
 certbot --apache -d "$domain_2" -d www."$domain_2"
