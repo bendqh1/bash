@@ -19,6 +19,8 @@ mkdir ${web_application_root}/${domain_2};
 ## Configure PHPMyAdmin and work with it
 
 ```shell
+cd $web_application_root
+apt install phpmyadmin
 echo 'Open PHPMyAdmin and do what's needed.'
 ```
 
