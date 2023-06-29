@@ -1,8 +1,8 @@
 ## Define a domain to work with
 
 ```shell
-read -p domain_1 &&
-read -p domain_2 &&
+read domain_1 &&
+read domain_2 &&
 if [ "$domain_1" == "$domain_2" ]; then
 echo $domain_2
 else
