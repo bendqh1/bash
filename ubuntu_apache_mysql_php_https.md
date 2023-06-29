@@ -22,7 +22,7 @@ export -f security_and_server_restart
 export -f temporarily_manage_database_and_lock_it_again
 
 go_to_web_application_root() {
-	cd $web_application_root/
+	cd ${web_application_root}/
 }
 
 security_and_server_restart() {
