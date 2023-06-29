@@ -30,11 +30,14 @@ unzip My_Zip_File
 ## Install and configure PHPMyAdmin
 
 ```shell
-cd $web_application_root
 apt install phpmyadmin
 mv /usr/share/phpmyadmin $web_application_root
+apt install libapache2-mod-php
 security_and_server_restart
 temporarily_manage_database_and_lock_it_again
+
+http://Server-IP/phpmyadmin
+
 ```
 
 ## Upload a database
