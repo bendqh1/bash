@@ -113,6 +113,8 @@ ln -sf /etc/apache2/sites-available/"$domain_2".conf /etc/apache2/sites-enabled/
 
 ## File 4 ##
 
+```shell
 certbot --apache -d "$domain_2" -d www."$domain_2"
+```
 
 echo "Open PHPMyAdmin and create databases";
