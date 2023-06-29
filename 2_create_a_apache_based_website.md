@@ -16,7 +16,7 @@ fi
 mkdir ${web_application_root}/${domain_2};
 ```
 
-## Create a website Database on `localhost` with PHPMyAdmin
+## Configure PHPMyAdmin and work with it
 
 ```shell
 echo 'Open PHPMyAdmin and do what's needed.'
