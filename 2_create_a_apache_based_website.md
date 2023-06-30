@@ -73,6 +73,12 @@ ln -sf /etc/apache2/sites-available/"$domain_2".conf /etc/apache2/sites-enabled/
 certbot --apache -d "$domain_2" -d www."$domain_2"
 ```
 
+## Use Composer
+
+```shell
+sudo -u www-data composer
+```
+
 ## Unset any variable used above
 
 ```shell
