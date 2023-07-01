@@ -58,7 +58,7 @@ ufw --force enable
 ufw allow 22,25,80,443/tcp
 ufw allow 22,25,80,443/udp
 apt install lamp-server^
-apt install gettext php-cli php-mysql php-mysqli php-gd php-zip php-json php-curl php-mbstring php-cgi php-phpseclib
+apt install gettext php-curl php-cli php-mysql php-mysqli php-zip php-json php-cgi php-gd php-mbstring php-phpseclib
 sudo apt install -y certbot python3-certbot-apache
 curl -sS https://getcomposer.org/installer -o composer-setup.php
 php composer-setup.php --install-dir=/usr/local/bin --filename=composer
