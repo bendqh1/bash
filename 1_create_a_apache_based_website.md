@@ -67,7 +67,7 @@ EOF
 ln -sf /etc/apache2/sites-available/"$domain_2".conf /etc/apache2/sites-enabled/
 ```
 
-## Create a certification according to which the web application is TLS-secured
+## Create an encryption certification
 
 ```shell
 certbot --apache -d "$domain_2" -d www."$domain_2"
@@ -76,7 +76,8 @@ certbot --apache -d "$domain_2" -d www."$domain_2"
 ## Use Composer
 
 ```shell
-sudo -u www-data composer
+sudo -u www-data
+composer
 ```
 
 ## Unset any variable used above
