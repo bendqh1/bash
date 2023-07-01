@@ -37,7 +37,7 @@ apt install php-seclib
 apt install php-pear
 security_and_server_restart
 temporarily_manage_database_and_lock_it_again
-https://DROPLET-IP-ADDRESS/phpmyadmin
+# Browse to https://DROPLET-IP-ADDRESS/phpmyadmin
 
 ```
 
