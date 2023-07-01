@@ -1,6 +1,6 @@
 Create a Debian-Apache-MySQL-PHP-HTTPS version-agnostic environment-bootstrapper to host at least one web application.
 
-## File 1 -- Background variables and functions for future comfortability
+## Background variables and functions for future comfortability
 
 This file is comprised of two parts.
 
@@ -47,7 +47,7 @@ source "$HOME"/.profile 2>/dev/null
 * The function `security_and_server_restart` repeats basic security directives that might have been mistakenly changed, then allows temporary management of MySQL database by a database management program as well as restarting the webserver.
 * The function `temporarily_manage_database_and_lock_it_again` means Temporarily manage the database until it locks again by `security_and_server_restart()`.
 
-## File 2 -- Basic application installation and/or configuration
+## Basic application installation and/or configuration
 
 ```shell
 #!/bin/bash
