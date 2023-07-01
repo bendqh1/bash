@@ -32,9 +32,9 @@ unzip My_Zip_File
 ```shell
 apt install phpmyadmin
 mv /usr/share/phpmyadmin $web_application_root
-apt install libapache2-mod-php
-apt install php-seclib
 apt install php-pear
+apt install php-seclib
+apt install libapache2-mod-php
 security_and_server_restart
 temporarily_manage_database_and_lock_it_again
 # Browse to https://DROPLET-IP-ADDRESS/phpmyadmin
