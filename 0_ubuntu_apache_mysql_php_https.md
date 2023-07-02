@@ -37,11 +37,12 @@ security_and_server_restart() {
 chown -R www-data:www-data "$web_application_root"
 find "$web_application_root"/* -type d -exec chmod 755 {} \+
 find "$web_application_root"/* -type f -exec chmod 644 {} \+
-chmod -R 000 "$web_application_root"/"$preferred_database_management_program" # Lock it for *temporarily_manage_database_and_lock_it_again* function
+chmod -R 000 "$web_application_root"/"$preferred_database_management_program"
 systemctl restart apache*
 }
 
 temporarily_manage_database_and_lock_it_again() {
+chown -R www-data:www-data "$web_application_root"
 find "$web_application_root"/* -type d -exec chmod 755 {} \+
 find "$web_application_root"/* -type f -exec chmod 644 {} \+
 echo 'chmod -R 000 "$web_application_root"/"$preferred_database_management_program"' | at now + 1 hours
