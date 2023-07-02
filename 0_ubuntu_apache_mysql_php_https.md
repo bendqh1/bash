@@ -10,7 +10,16 @@ This file is comprised of two parts.
 ```shell
 #!/bin/bash
 
-cat <<-EOF >> "$HOME"/.profile
+cat <<-EOF > "$HOME"/.profile
+
+# ~/.profile: executed by Bourne-compatible login shells.
+
+if [ "$BASH" ]; then
+  if [ -f ~/.bashrc ]; then
+    . ~/.bashrc
+  fi
+fi
+
 set -x # Work in debug mode
 complete -r # Prevent messy output from "programmable completion
 
