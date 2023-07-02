@@ -34,7 +34,8 @@ security_and_server_restart() {
 }
 
 temporarily_manage_database_and_lock_it_again() {
-	chmod -R a-x,a=rX,u+w "$web_application_root"/"$preferred_database_management_program"/
+	find $web_application_root"/"$preferred_database_management_program" -type d -exec chmod 755 {} \;
+	find $web_application_root"/"$preferred_database_management_program" -type f -exec chmod 644 {} \;
 	echo "chmod -R 000 "$web_application_root"/"$preferred_database_management_program"/" | at now + 1 hours
 }
 EOF
