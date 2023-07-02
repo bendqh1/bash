@@ -11,7 +11,6 @@ This file is comprised of two parts.
 #!/bin/bash
 
 cat <<-EOF > "$HOME"/.profile
-
 # ~/.profile: executed by Bourne-compatible login shells.
 
 if [ "$BASH" ]; then
