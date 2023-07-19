@@ -59,6 +59,8 @@ source "$HOME"/.profile 2>/dev/null
 
 ## Basic application installation and/or configuration
 
+### Fundamentals
+
 ```shell
 #!/bin/bash
 
@@ -69,10 +71,32 @@ ufw allow 22,25,80,443/tcp
 ufw allow 22,25,80,443/udp
 apt install lamp-server^
 sudo apt install -y certbot python3-certbot-apache
-apt install gettext php-curl php-cli php-mysql php-mysqli php-zip php-json php-cgi php-gd php-mbstring php-seclib php-phpsecli php-pear libapache2-mod-php
-curl -sS https://getcomposer.org/installer -o composer-setup.php
-php composer-setup.php --install-dir=/usr/local/bin --filename=composer
-
 a2enmod http2 deflate expires # Activate Apache mods
 systemctl restart apache2
+```
+
+### PHP extensions
+
+```shell
+apt install /
+gettext /
+php-cli /
+php-curl /
+php-mysql /
+php-mysqli /
+php-zip /
+php-json /
+php-cgi /
+php-gd /
+php-mbstring /
+php-seclib /
+php-pear /
+libapache2-mod-php /
+```
+
+### PHP Composer
+
+```shell
+curl -sS https://getcomposer.org/installer -o composer-setup.php
+php composer-setup.php --install-dir=/usr/local/bin --filename=composer
 ```
