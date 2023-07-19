@@ -78,20 +78,7 @@ systemctl restart apache2
 ### PHP extensions
 
 ```shell
-apt install /
-gettext /
-php-cli /
-php-curl /
-php-mysql /
-php-mysqli /
-php-zip /
-php-json /
-php-cgi /
-php-gd /
-php-mbstring /
-php-seclib /
-php-pear /
-libapache2-mod-php /
+Should come back soon.
 ```
 
 ### PHP Composer
