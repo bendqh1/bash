@@ -97,7 +97,7 @@ apt install php-mbstring # for PHPMyAdmin and Drupal ; mb here is "multi byte" s
 ### PHP Composer
 
 ```shell
-curl -sS https://getcomposer.org/installer -o /tmp/composer-setup.php # sS means silent and show-error and o means write output to file
-php /tmp/composer-setup.php --install-dir=/usr/local/bin --filename=composer
+curl -sS https://getcomposer.org/installer means silent and show-error
+php composer-setup.php --filename=composer --install-dir=/usr/local/bin
 sudo -u www-data composer # No need to switch user to www-data, just run the command from this user indirectly
 ```
