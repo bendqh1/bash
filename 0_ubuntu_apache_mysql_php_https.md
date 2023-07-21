@@ -74,7 +74,7 @@ ufw --force enable
 ufw allow 22,25,80,443/tcp
 ufw allow 22,25,80,443/udp
 apt install lamp-server^
-sudo apt install -y certbot python3-certbot-apache
+sudo apt install certbot python3-certbot-apache
 a2enmod http2 deflate expires # Activate Apache mods
 systemctl restart apache2
 ```
