@@ -8,6 +8,10 @@ This file is comprised of two parts.
 * The second part is a single `source` sourcing of `.profile`, to ensure that the changes will be effective immediately in the very first shell session and actually in **any** shell session.
 
 ```shell
+cd ~ # Make sure you are in your home directory
+```
+
+```shell
 #!/bin/bash
 
 cat <<-EOF > "$HOME"/.profile
@@ -93,6 +97,7 @@ apt install php-mbstring # for PHPMyAdmin and Drupal ; mb here is "multi byte" s
 ### PHP Composer
 
 ```shell
-curl -sS https://getcomposer.org/installer -o composer-setup.php
-php composer-setup.php --install-dir=/usr/local/bin --filename=composer
+curl -sS https://getcomposer.org/installer -o /tmp/composer-setup.php # sS means silent and show-error and o means write output to file
+php /tmp/composer-setup.php --install-dir=/usr/local/bin --filename=composer
+sudo -u www-data composer # No need to switch user to www-data, just run the command from this user indirectly
 ```
