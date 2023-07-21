@@ -78,15 +78,15 @@ systemctl restart apache2
 ### PHP extensions
 
 ```shell
-apt install php-cli # run PHP commands from the terminal
-apt install php-zip # run zip commands from PHP applications
-apt install php-curl # for Drupal ; allows automated testing of Drupal
-apt install php-xml # for Drupal
-apt install php-json # for Drupal ; 
-apt install php-mysql # for Drupal ; allows Drupal to communicate with MySQL
-apt install php-mysqli # for Drupal  ; allows Drupal to communicate with MySQL
-apt install php-gd # for Drupal ; allows image manipulation in Drupal
-apt install libapache2-mod-php # for Apache2
+apt install php-cli # run PHP commands from the terminal.
+apt install php-zip # run zip commands from PHP applications.
+apt install php-xml # allows XML inside PHP ; needed for various applications.
+apt install php-json # allows JSON inside PHP ; needed for various applications.
+apt install libapache2-mod-php # Get Apache and PHP to communicate (otherwise, Apache will be only a HTML-JavaScript-CSS webserver).
+apt install php-mysql # allows PHP applications to communicate with PHP.
+apt install php-mysqli # allows PHP applications to communicate with PHP.
+apt install php-curl # for Drupal ; allows automated testing of Drupal.
+apt install php-gd # for Drupal ; allows image manipulation in Drupal.
 apt install php-mbstring # for PHPMyAdmin and Drupal ; mb here is "multi byte" string ; allows creating strings of at least one character of two or more bytes.
 ```
 
