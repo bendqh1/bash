@@ -72,7 +72,7 @@ certbot --apache -d "$domain_2" -d www."$domain_2"
 ## Use Composer
 
 ```shell
-sudo -u www-data
+sudo -u www-data # Switch from sudo to the user `www-data` because it is explicitly advised not to run composer as root or sudo
 composer
 ```
 
