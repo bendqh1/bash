@@ -12,10 +12,12 @@ cd ~ # Make sure you are in your home directory
 #!/bin/bash
 
 apt update -y
-apt upgrade ufw sshguard unattended-upgrades wget curl zip unzip tree git at -y
+apt upgrade sshguard
+apt upgrade ufw
 ufw --force enable
 ufw allow 22,25,80,443/tcp
 ufw allow 22,25,80,443/udp
+apt upgrade unattended-upgrades wget curl zip unzip tree git at
 apt install lamp-server^
 apt install certbot python3-certbot-apache
 a2enmod http2 deflate expires # Activate Apache mods
