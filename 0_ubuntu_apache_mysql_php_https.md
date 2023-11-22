@@ -1,5 +1,9 @@
 Create a Debian-Apache-MySQL-PHP-HTTPS version-agnostic environment-bootstrapper to host at least one web application.
 
+```shell
+cd ~ # Make sure you are in your home directory
+```
+
 ## Basic application installation and/or configuration
 
 ### Fundamentals
@@ -47,10 +51,6 @@ This file is comprised of two parts.
 
 * The first part is a `cat` heredocument for `.profile` aimed to declare some global modes, variables and functions ("global" as to effect all shell sessions), which, from my experience, are harmless.
 * The second part is a single `source` sourcing of `.profile`, to ensure that the changes will be effective immediately in the very first shell session and actually in **any** shell session.
-
-```shell
-cd ~ # Make sure you are in your home directory
-```
 
 ```shell
 #!/bin/bash
