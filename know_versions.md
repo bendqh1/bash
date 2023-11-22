@@ -7,4 +7,13 @@ php -v # Know PHP version
 dpkg -l phpmyadmin # Know PHPMyAdmin version
 ```
 
+Get CentOS version:
+
+```
+lsb_release -a
+cat /etc/redhat-release
+hostnamectl
+rpm -q centos-release
+```
+
 * https://www.namecheap.com/support/knowledgebase/article.aspx/129/22/what-version-of-the-software-is-used-on-your-servers/
