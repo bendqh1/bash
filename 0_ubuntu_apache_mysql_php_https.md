@@ -1,5 +1,46 @@
 Create a Debian-Apache-MySQL-PHP-HTTPS version-agnostic environment-bootstrapper to host at least one web application.
 
+## Basic application installation and/or configuration
+
+### Fundamentals
+
+```shell
+#!/bin/bash
+
+apt update -y
+apt upgrade ufw sshguard unattended-upgrades wget curl zip unzip tree git at -y
+ufw --force enable
+ufw allow 22,25,80,443/tcp
+ufw allow 22,25,80,443/udp
+apt install lamp-server^
+apt install certbot python3-certbot-apache
+a2enmod http2 deflate expires # Activate Apache mods
+systemctl restart apache2
+```
+
+### PHP extensions
+
+```shell
+apt install php-cli # run PHP commands from the terminal.
+apt install php-zip # run zip commands from PHP applications.
+apt install php-xml # allows XML inside PHP ; needed for various applications.
+apt install php-json # allows JSON inside PHP ; needed for various applications.
+apt install libapache2-mod-php # Get Apache and PHP to communicate (otherwise, Apache will be only a HTML-JavaScript-CSS webserver).
+apt install php-mysql # allows PHP applications to communicate with PHP.
+apt install php-mysqli # allows PHP applications to communicate with PHP.
+apt install php-curl # for Drupal ; allows automated testing of Drupal.
+apt install php-gd # for Drupal ; allows image manipulation in Drupal.
+apt install php-mbstring # for PHPMyAdmin and Drupal ; mb here is "multi byte" string ; allows creating strings of at least one character of two or more bytes.
+```
+
+### PHP Composer
+
+```shell
+curl https://getcomposer.org/installer -o ./composer-setup.php
+php composer-setup.php --filename=composer --install-dir=/usr/local/bin
+sudo -u www-data composer # No need to switch user to www-data, just run the command from this user indirectly
+```
+
 ## Background variables and functions for future comfortability
 
 This file is comprised of two parts.
@@ -60,44 +101,3 @@ source "$HOME"/.profile 2>/dev/null
 
 * The function `security_and_server_restart` repeats basic security directives that might have been mistakenly changed, then allows temporary management of MySQL database by a database management program as well as restarting the webserver.
 * The function `temporarily_manage_database_and_lock_it_again` means Temporarily manage the database until it locks again by `security_and_server_restart()`.
-
-## Basic application installation and/or configuration
-
-### Fundamentals
-
-```shell
-#!/bin/bash
-
-apt update -y
-apt upgrade ufw sshguard unattended-upgrades wget curl zip unzip tree git at -y
-ufw --force enable
-ufw allow 22,25,80,443/tcp
-ufw allow 22,25,80,443/udp
-apt install lamp-server^
-apt install certbot python3-certbot-apache
-a2enmod http2 deflate expires # Activate Apache mods
-systemctl restart apache2
-```
-
-### PHP extensions
-
-```shell
-apt install php-cli # run PHP commands from the terminal.
-apt install php-zip # run zip commands from PHP applications.
-apt install php-xml # allows XML inside PHP ; needed for various applications.
-apt install php-json # allows JSON inside PHP ; needed for various applications.
-apt install libapache2-mod-php # Get Apache and PHP to communicate (otherwise, Apache will be only a HTML-JavaScript-CSS webserver).
-apt install php-mysql # allows PHP applications to communicate with PHP.
-apt install php-mysqli # allows PHP applications to communicate with PHP.
-apt install php-curl # for Drupal ; allows automated testing of Drupal.
-apt install php-gd # for Drupal ; allows image manipulation in Drupal.
-apt install php-mbstring # for PHPMyAdmin and Drupal ; mb here is "multi byte" string ; allows creating strings of at least one character of two or more bytes.
-```
-
-### PHP Composer
-
-```shell
-curl https://getcomposer.org/installer -o ./composer-setup.php
-php composer-setup.php --filename=composer --install-dir=/usr/local/bin
-sudo -u www-data composer # No need to switch user to www-data, just run the command from this user indirectly
-```
