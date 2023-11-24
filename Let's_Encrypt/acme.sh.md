@@ -25,3 +25,9 @@ If installed as above, a uninstallation would include:
 * Deleting `${HOME}/acme.sh`
 * Deleting acme.sh data from the file `.bashrc`
 * Deleting acme.sh data from the `crontab -l`.
+
+More information here:
+
+* https://github.com/acmesh-official/acme.sh/issues/4882
+
+One might need to consult the hosting provider's support staff.
