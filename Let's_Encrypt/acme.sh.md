@@ -4,7 +4,7 @@
 * No web subdomain
 * The addon web domain could act as a parked domain which is basically a landing page of the hosting provider suggesting the parked domain for sale. 
 
-### Staging and testing for acme.sh problems
+### Installing acme.sh
 
 ```shell
 cd ${WEB_APPLICATION_ROOT_DIR}}
@@ -17,3 +17,11 @@ crontab -l | grep acme.sh#
 acme.sh --issue --webroot . -d EXAMPLE.COM -d www.EXAMPLE.COM
 acme.sh --deploy --deployhook . --domain EXAMPLE.COM --domain www.mydomain.com
 ```
+
+### Uninstalling acme.sh
+
+If installed as above, a uninstallation would include:
+
+* Deleting `${HOME}/acme.sh`
+* Deleting acme.sh data from the file `.bashrc`
+* Deleting acme.sh data from the `crontab -l`.
