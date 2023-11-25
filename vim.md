@@ -1,5 +1,3 @@
-# Vim
-
 ## Main mode
 
 * To edit, press <kbd>i</kbd>.
