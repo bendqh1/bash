@@ -22,7 +22,7 @@ acme.sh --deploy --deployhook . --domain EXAMPLE.COM --domain www.mydomain.com
 
 If installed as above, a uninstallation would include:
 
-* Deleting `${HOME}/acme.sh`
+* Deleting `${HOME}/.acme.sh` (directory).
 * Deleting acme.sh data from the file `.bashrc`
 * Deleting acme.sh data from the `crontab -l`.
 
