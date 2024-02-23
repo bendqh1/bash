@@ -69,16 +69,8 @@ fi
 set -x # Work in debug mode
 complete -r # Prevent messy output from "programmable completion
 
-export web_application_root="/var/www/html"
-export preferred_database_management_program="phpmyadmin"
-
-export -f go_to_web_application_root
-export -f security_and_server_restart
-export -f temporarily_manage_database_and_lock_it_again
-
-go_to_web_application_root() {
-cd ${web_application_root}/
-}
+web_application_root="/var/www/html"
+preferred_database_management_program="phpmyadmin"
 
 security_and_server_restart() {
 chown -R www-data:www-data "$web_application_root"
@@ -94,6 +86,10 @@ find "$web_application_root"/* -type d -exec chmod 755 {} \+
 find "$web_application_root"/* -type f -exec chmod 644 {} \+
 echo 'chmod -R 000 "$web_application_root"/"$preferred_database_management_program"' | at now + 1 hours
 }
+
+export -f security_and_server_restart
+export -f temporarily_manage_database_and_lock_it_again
+
 EOF
 
 source "$HOME"/.profile 2>/dev/null
