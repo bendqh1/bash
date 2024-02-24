@@ -4,4 +4,4 @@
 echo $PATH | tr ':' '\n'
 ```
 
-Show PATH variable values in different lines instead in one long one-liner separated with colons (`:`).
+Show `PATH` environment variable values in different lines instead in one long one-liner separated with colons (`:`).
