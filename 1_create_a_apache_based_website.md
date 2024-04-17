@@ -41,7 +41,7 @@ temporarily_manage_database_and_lock_it_again
 
 Just do it !
 
-## Create a Apahce virtual host file
+## Create an Apahce virtual host file
 
 ```shell
 #!/bin/bash
