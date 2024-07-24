@@ -15,7 +15,24 @@
     # Clear the screen
     Ctrl + l
 
-## Commands
+## Variables
+
+Set a variable for a file and a variable for a string, echo them, and append the string to the file:
+
+```shell
+my_file="$HOME/public_html/benaharoni.com/web/core/themes/olivero/templates/layout/page.html.twig"
+my_string="<span class=\"globalrs_dynamic_year\">{{ 'now' | date('Y') }}</span>"
+echo $my_file
+echo $my_string
+
+cat $my_file
+
+echo $my_string >> $my_file
+
+tail $my_file
+```
+
+## Misc
 
     ${BASH_VERSION}
     zip -r ./seo-wiki.zip ./seo-wiki.org/
