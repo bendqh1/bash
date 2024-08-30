@@ -9,3 +9,7 @@
 ## Paste
 
 <kbd>CTRL</kbd> + <kbd>U</kbd>
+
+## Can't use forward slash in Nano (in Putty)
+
+Putty > Terminal > Features > Disable application keypad mode
