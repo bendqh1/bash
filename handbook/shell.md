@@ -32,6 +32,10 @@ echo $my_string >> $my_file
 tail $my_file
 ```
 
+## aliases
+
+The command `alias` shows all aliases.
+
 ## Misc
 
     ${BASH_VERSION}
