@@ -1,3 +1,17 @@
+## Versions to know
+
+* Operating system version
+* Bash version
+* Web server version
+* Database version
+* PHP version
+* PHP modules versions
+* Composer version
+* CMS-CLI version
+* CMS version
+
+## Some commands
+
 ```shell
 lsb_release -a # Know OS version
 bash --version
