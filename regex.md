@@ -35,6 +35,10 @@ Common regex (POSIX/PCRE/Emacs) primarily use to search (match) data inside file
 	^\s*$[\n\r]* 	# Match all empty lines (with their line feeds)
 	[^\s-]          # Match until this (until Whitespace; Caret in a [] is a negator
 
+## Regex I used in MediaWiki
+
+* `<ref>.*?</ref>`
+
 ## Shell wildcards
 
 Shell wildcards (or shell globs) are a type of shell (file name) expansion, such as tilde expansion.<br>
