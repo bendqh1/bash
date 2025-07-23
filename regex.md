@@ -106,12 +106,11 @@ Delete all simple references for an article:
 
 ```
 <ref>.*?</ref>
-```
-
-Delete all complex references for an article (HTML has some attributes):
-
-```
 <ref .*?>.*?</ref>
+```
+
+```
+
 ```
 
 ## Shell wildcards
