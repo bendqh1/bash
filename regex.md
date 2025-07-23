@@ -109,8 +109,12 @@ Delete all simple references for an article:
 <ref .*?>.*?</ref>
 ```
 
-```
+## Special regex
 
+Everything which isn't a special character (`}` in this case):
+
+```
+[^}]+
 ```
 
 ## Shell wildcards
