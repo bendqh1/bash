@@ -105,7 +105,7 @@ Match pretty much everything:
 Delete all references for an article:
 
 ```
-<ref>.*?</ref>`
+<ref>.*?</ref>
 ```
 
 ## Shell wildcards
