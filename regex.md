@@ -102,10 +102,16 @@ Match pretty much everything:
 
 ## Regex I used in MediaWiki
 
-Delete all references for an article:
+Delete all simple references for an article:
 
 ```
 <ref>.*?</ref>
+```
+
+Delete all complex references for an article (HTML has some attributes):
+
+```
+<ref .*?>.*?</ref>
 ```
 
 ## Shell wildcards
