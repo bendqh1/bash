@@ -22,22 +22,91 @@ DELETE LAST COMMA FROM RELEVANT LAST LINE
 
 Common regex (POSIX/PCRE/Emacs) primarily use to search (match) data inside files.
 
-	x 		# Match Stream Letter or letters
-	. 		# Match any single character
-	? 		# Match any letter or number single character
-	^ 		# Match a pattern that starts with following text in field
-	$ 		# Match a pattern that ends with following text in field
-	* 		# Repeat previous matching pattern till the end of line
-	| 		# Match this and/or this
-	\K 		# Negate all before it in that field, to match per instructions, all that is after it
-	^xyz .* 	# Match all that starts with xyz and a space, and all after it in that field
-	^[#;].* 	# Match all lines starting with a `;` or `#`
-	^\s*$[\n\r]* 	# Match all empty lines (with their line feeds)
-	[^\s-]          # Match until this (until Whitespace; Caret in a [] is a negator
+Match Stream Letter or letters (any letter is fine):
+
+```
+x
+```
+
+Match any single character:
+
+```
+.
+```
+
+Match any letter or number or single character
+
+```
+?
+```
+
+Match a pattern that starts with following a text in field:
+
+```
+^
+```
+
+Match a pattern that ends with following a text in field:
+
+```
+$
+```
+
+Repeat previous matching pattern till the end of line:
+
+```
+*
+```
+
+Match this ANDOR this
+
+```
+|
+```
+
+Match all that starts with xyz and a space, and all after it in that field:
+
+```
+^xyz .*
+```
+
+Negate all before it in that field, to match per instructions, all that is after it in that field:
+
+```
+\K
+```
+
+Match all lines starting with a `;` or `#` (good for removing all comments):
+
+```
+^[#;].*
+```
+
+Match all empty lines (with their line feeds):
+
+```
+^\s*$[\n\r]*
+```
+
+Match until this (until Whitespace; Caret in `[]` brackets is a negator):
+
+```
+[^\s-]
+```
+
+Match pretty much everything:
+
+```
+.*?
+```	
 
 ## Regex I used in MediaWiki
 
-* `<ref>.*?</ref>`
+Delete all references for an article:
+
+```
+<ref>.*?</ref>`
+```
 
 ## Shell wildcards
 
