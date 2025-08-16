@@ -2,7 +2,15 @@ The concepts of **pattern** and **matching** (via pattern-to-pattern comparison)
 
 ## Visual Studio Code
 
-### Delete all lines
+### Find all CSS classes
+
+```
+class=".*?"
+```
+
+In this code `.*?` matches any characters, as few as possible (non-greedy).
+
+### Change all whitespace character indentations to indentation character indentations, and, in the end of each relevant line -- add a comma after each single quote mark
 
 * Click `CTRL+Shift+P`, then choose Convert indentation to Tabs
 * When deleting all lines, hitting Enter in the replace field might not be enough and we'll need to click the replace button instead
@@ -16,17 +24,7 @@ SEARCH:
 REPLACE:
 
 ',
-
-DELETE LAST COMMA FROM RELEVANT LAST LINE
 ```
-
-### Find all CSS classes
-
-```
-class=".*?"
-```
-
-In this code `.*?` matches any characters, as few as possible (non-greedy).
 
 ## Common regex
 
