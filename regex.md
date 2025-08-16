@@ -2,6 +2,8 @@ The concepts of **pattern** and **matching** (via pattern-to-pattern comparison)
 
 ## Visual Studio Code
 
+### Delete all lines
+
 * Click `CTRL+Shift+P`, then choose Convert indentation to Tabs
 * When deleting all lines, hitting Enter in the replace field might not be enough and we'll need to click the replace button instead
 * Add comma in the end of each line:
@@ -17,6 +19,14 @@ REPLACE:
 
 DELETE LAST COMMA FROM RELEVANT LAST LINE
 ```
+
+### Find all CSS classes
+
+```
+class=".*?"
+```
+
+In this code `.*?` matches any characters, as few as possible (non-greedy).
 
 ## Common regex
 
