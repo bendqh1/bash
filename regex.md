@@ -8,7 +8,7 @@ The concepts of **pattern** and **matching** (via pattern-to-pattern comparison)
 class=".*?"
 ```
 
-In this code `.*?` matches any characters, as few as possible (non-greedy).
+In this code `.*?` matches any character but as few as possible (non-greedy).
 
 ### Change all whitespace character indentations to indentation character indentations, and, in the end of each relevant line -- add a comma after each single quote mark
 
