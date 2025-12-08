@@ -117,6 +117,13 @@ Delete all simple references for an article:
 <ref .*?>.*?</ref>
 ```
 
+Add an asterisk to the start of each line
+
+```
+^
+*
+```
+
 ## Special regex
 
 Everything which isn't a special character (`}` in this case):
